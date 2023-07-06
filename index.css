@@ -1,10 +1,12 @@
 :root {
-    --gapping: 30px;
+    --gapping: 20px;
+    --header-icon: 25px;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    /* border: 1px solid black; */
 }
 
 body {
@@ -21,26 +23,92 @@ body {
     grid-column: 2/-1;
     grid-row: 1/2;
     display: grid;
-    grid-template-rows: repeat(2, 1fr); 
+    grid-template-rows: 2fr 3fr; 
 }
 
 .header .top {
     display: grid;
-    grid-template-columns: 8fr repeat(2, 75px) 3fr;
-    gap: 5px;
+    grid-template-columns: 5fr var(--header-icon) 70px 1fr;
+    gap: 10px;
+    align-items: center;
 }
 
 .header .bottom {
     display: grid;
-    grid-template-columns: 4fr repeat(3, 1fr);
-    gap: 5px;
+    grid-template-columns: 5fr 3fr;
 }
 
-.header > * > *{
-    border: 1px solid black;
+.search-bar {
+    display: flex;
+    padding: 0 100px 0 20px;
+    align-items: center;
 }
 
+.search-icon {
+    width: var(--header-icon);
+    height: var(--header-icon);
+    margin: 5px;
+}
 
+.pfp {
+    height: 50px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.search {
+    flex: 1;
+    border: none;
+    background-color: #efefef;
+    height: 25px;
+    border-radius: 25px;
+    padding: 0 10px;
+}
+
+.greeting-card {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting > *{
+    margin: 3px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+button {
+    flex: 1;
+    height: 35px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #0088ff;
+}
+
+.greeting p {
+    font-size: small;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.search:focus {
+    outline: none;
+    border: 1px solid #222;
+}
 
 .sidebar {
     background-color: skyblue;
@@ -90,7 +158,7 @@ body {
 }
 
 .content > * {
-    padding: 10px;
+    padding: var(--gapping);
 }
 
 .main {
