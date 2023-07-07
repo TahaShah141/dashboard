@@ -17,7 +17,6 @@ body {
     margin: 0;
     grid-template-columns: 2fr 7fr;
     grid-template-rows: 25vh 1fr;
-    background-color: pink;
 }
 
 .header {
@@ -27,6 +26,7 @@ body {
     grid-row: 1/2;
     display: grid;
     grid-template-rows: 2fr 3fr; 
+    box-shadow: 5px 0 3px gray;
 }
 
 .header .top {
@@ -55,7 +55,8 @@ body {
 
 .pfp {
     height: 50px;
-    background-color: red;
+    width: 50px;
+    background-color: #e99b26;
     margin: 10px;
     border-radius: 25px;
 }
@@ -99,7 +100,7 @@ button {
     border-radius: 20px;
     font-weight: bold;
     font-size: 15px;
-    background-color: #0088ff;
+    background-color: #36aad8;
 }
 
 .greeting p {
@@ -114,7 +115,7 @@ button {
 }
 
 .sidebar {
-    background-color: #0088ff;
+    background-color: #36aad8;
     grid-column: 1/2;
     grid-row: 1/-1;
     display: grid;
@@ -158,6 +159,7 @@ svg {
 }
 
 .control h3 {
+    font-size: medium;
     margin: 0;
     color: white;
 }
@@ -204,6 +206,7 @@ svg {
     border-radius: 7px;
     display: grid;
     grid-template-columns: 10px 1fr;
+    box-shadow: 3px 2px 5px gray;
 }
 
 .stripe {
@@ -278,5 +281,70 @@ svg {
 .announcement-tab, .trending-tab{
     flex: 1;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px gray;
+}
+
+.announcement-tab {
+    display: grid;
+    padding: 20px;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.anc {
+    border: 2px solid #ccc;
+    border-right: none;
+    border-left: none;
+}
+
+.anc:first-child {
+    border: none;
+}
+
+.anc:last-child {
+    border: none;
+}
+
+.anc * {
+    margin: 5px 0;
+}
+
+.anc p {
+    font-size: 12px;
+    color: #afafaf;
+}
+
+.trending-tab {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 15px 20px;
+}
+
+.trending-sect {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.trending-sect .pfp {
+    margin: 0;
+    width: 45px;
+    height: 45px;
+}
+
+.trending-content p {
+    margin: 2px 10px;
+    font-size: small;
+}
+
+.title {
+    font-weight: 500;
+}
+
+.subtitle {
+    font-weight: 300;
+    color: #4f4f4f;
 }
